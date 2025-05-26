@@ -2,6 +2,7 @@
 // May 26, 2025
 // CS 142 - M8A2B
 // This took me a few hours, but was fun doing the polishing with the sleep. Its such more detailed than python's sleep(4)
+// SOURCES USED: https://www.digitalocean.com/community/tutorials/thread-sleep-java to implement the sleep function within my code.
 
 /*
 
