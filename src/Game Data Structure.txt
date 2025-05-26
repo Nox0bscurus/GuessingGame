@@ -1,0 +1,80 @@
+Initial Setup: Consider this starting tree:
+
+// Here the tree has three (3) TreeNodes:
+//  Root or "Is it alive?"   (a question node)
+//  "Cat", a Yes leaf node
+//  "Rock", a No leaf node
+Root: "Is it alive?"
+  Yes → "Cat" (leaf)
+  No → "Rock" (leaf)
+
+
+Exercise 1.1: Trace through finding "Cat" Fill in what happens at each step:
+
+// Here, the user is thinking of a "Cat"
+Step 1: Current node = "Is it alive?" (question)
+        Computer asks: "Is it alive?"
+        User answers: [Yes/No? Fill in: Yes]
+        Next node = [Which child? Fill in: Cat]
+
+Step 2: Current node = [Fill in: Cat] (leaf)
+        Computer asks: [Fill in: Is the cat a living thing?]
+        User answers: Yes
+        Result: [Success/Failure? Fill in: Success, yay!]
+        
+Tree after this round: [Changed/Unchanged? Fill in: Unchanged.]
+
+
+Exercise 1.2: Trace through learning "Dog"
+Fill in what happens at each step:
+
+// Here, the user is thinking of a "Dog"
+Step 1: Current node = "Is it alive?" (question)
+        Computer asks: "Is it alive?"
+        User answers: Yes
+        Next node = [Fill in: Cat..]
+
+Step 2: Current node = "Cat" (leaf)
+        Computer asks: "Is the object a Cat?"
+        User answers: [Fill in: No.]
+        Result: Computer guessed wrong!
+
+Step 3: Learning phase
+        Computer asks: "What were you thinking of?"
+        User answers: [Fill in: The dog...]
+        
+        Computer asks: "Please give me a yes/no question to distinguish a Dog from a Cat"
+        User answers: [Fill in example question: Are dogs louder than cats?]
+        
+        Computer asks: "For a Dog, what is the answer to: [your question]?"
+        User answers: [Fill in: yes...]
+
+
+Exercise 1.3: Show the tree structure after learning "Dog"
+Complete the transformed tree structure:
+
+// After adding "Dog" to the tree
+Root: "Is it alive?"
+    Yes → [Fill in: Is the pooch hungry?]
+        Yes → [Fill in: *dog barks loudly*]
+        No → [Fill in: Cat ]
+    No → "Rock" (unchanged)
+
+
+
+Exercise 1.4: Trace finding "Dog" in the new tree structure.
+Fill in the complete path to find "Dog":
+
+// Here the user is thinking of Dog and uses the updated, transformed tree structure
+// Starting from the root
+Question 1: Computer asks: [Fill in: Is it alive?]
+           User answers: [Fill in: Yes...]
+           
+Question 2: Computer asks: [Fill in: Is he hungry?]
+           User answers: [Fill in: Yes.]
+           
+Final: Computer asks: [Fill in: Maybe you should feed your dog then...]
+       User answers: Yes (Success!)
+       
+Total questions before guess: [Fill in: 2]
+
